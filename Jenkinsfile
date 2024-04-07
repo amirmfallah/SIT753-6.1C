@@ -21,7 +21,7 @@ pipeline {
             post {
                 always {
                     emailext attachmentsPattern: 'test.log',
-                    to: 'fijol53675@felibg.com', 
+                    to: 'xacecaf879@ekposta.com', 
                     subject: "Test Results - ${env.JOB_NAME} #${env.BUILD_NUMBER}", 
                     body: "Unit tests completed. Status: ${currentBuild.currentResult}. See attached log for details."
                 }
@@ -41,7 +41,7 @@ pipeline {
             post {
                 always {
                     emailext attachmentsPattern: 'scan.log',
-                    to: 'fijol53675@felibg.com', 
+                    to: 'xacecaf879@ekposta.com', 
                     subject: "Security Scan - ${env.JOB_NAME} #${env.BUILD_NUMBER}", 
                     body: "Security Scan completed. Status: ${currentBuild.currentResult}. See attached log for details."
                 }
@@ -69,7 +69,7 @@ pipeline {
     post {
         always {
             emailext attachLog: true,
-            to: 'fijol53675@felibg.com',
+            to: 'xacecaf879@ekposta.com',
             subject: "Pipeline Execution Completed - ${env.JOB_NAME} #${env.BUILD_NUMBER}",
             body: "The pipeline execution has completed. Check Jenkins for details: ${env.BUILD_URL}"
         }
